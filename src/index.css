@@ -1,0 +1,170 @@
+@import 'bootstrap';
+
+/* Importa un font moderno */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+  --bg: #121212;
+  --card-bg: #1e1e1e;
+  --text-color: #e0e0e0;
+  --muted: #aaaaaa;
+  --primary: #7c3aed;
+  --primary-hover: #5b21b6;
+  --badge-radius: 999px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-color);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Header */
+.navbar {
+  background-color: #1c1c1c;
+  border-bottom: 1px solid #333;
+}
+
+.navbar-brand {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+.navbar-brand:hover {
+  color: var(--primary-hover);
+}
+
+/* Card */
+.card {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.card-text {
+  color: var(--text-color);
+  font-size: 15px;
+}
+
+/* Bottoni */
+.btn-purple {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.375rem 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-purple:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Badge tecnologia */
+.tech-badge {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: var(--badge-radius);
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: white;
+  white-space: nowrap;
+}
+
+/* Immagine */
+.project-image {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+/* Paginazione */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.pagination button {
+  background-color: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--primary);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pagination button:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.text-muted {
+  color: var(--muted) !important;
+  font-style: italic;
+}
+
+/* Loader */
+.custom-loader-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #121212;
+  color: #fff;
+}
+
+.custom-spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #333;
+  border-top-color: #0dcaf0;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
