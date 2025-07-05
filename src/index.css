@@ -29,17 +29,7 @@ body {
 .navbar {
   background-color: #1c1c1c;
   border-bottom: 1px solid #333;
-}
-
-.navbar-brand {
-  color: var(--primary);
-  font-weight: 600;
-  font-size: 1.3rem;
-  text-decoration: none;
-}
-
-.navbar-brand:hover {
-  color: var(--primary-hover);
+  font-size: 1rem;
 }
 
 /* Card */
@@ -53,7 +43,7 @@ body {
   transition: transform 0.2s;
 }
 
-.card:hover {
+.row .card:hover {
   transform: translateY(-4px);
 }
 
@@ -68,34 +58,32 @@ body {
 }
 
 /* Bottoni */
-.btn-purple {
-  background-color: var(--primary);
-  color: white;
-  padding: 0.375rem 0.75rem;
+.modern-button {
+  background-color: #6f42c1;
+  color: #fff;
   border: none;
-  border-radius: 6px;
-  font-size: 0.85rem;
+  border-radius: 30px;
+  padding: 10px 24px;
   font-weight: 500;
-  text-align: center;
-  cursor: pointer;
-  transition: background-color 0.2s;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(111, 66, 193, 0.2);
 }
 
-.btn-purple:hover {
-  background-color: var(--primary-hover);
+.modern-button:hover {
+  background-color: #7c4dff;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(124, 77, 255, 0.6);
+  transform: translateY(-2px);
 }
 
 /* Badge tecnologia */
-.tech-badge {
-  display: inline-block;
+.badge {
   padding: 0.3rem 0.7rem;
   font-size: 0.75rem;
   font-weight: 500;
   border-radius: var(--badge-radius);
-  margin-right: 0.5rem;
   margin-bottom: 0.5rem;
-  color: white;
-  white-space: nowrap;
 }
 
 /* Immagine */
