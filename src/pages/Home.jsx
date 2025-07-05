@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom";
 import ProjectCard from "../components/ProjectCard";
+import Pagination from "../components/Pagination";
 
 const baseURL = 'http://localhost:8000/api';
 
@@ -49,17 +50,7 @@ export default function Home() {
             <div className="container mt-4">
                 <ProjectCard projects={projects} />
 
-                <div className="pagination d-flex justify-content-between align-items-center mb-3">
-                    <button className="btn btn-outline-secondary" onClick={prevPage} disabled={currentPage === 1}>
-                        &laquo; Precedente
-                    </button>
-
-                    <span>Pagina {currentPage} di {lastPage}</span>
-
-                    <button className="btn btn-outline-secondary" onClick={nextPage} disabled={currentPage === lastPage}>
-                        &laquo; Successiva
-                    </button>
-                </div>
+                <Pagination />
             </div>
         </>
     )
